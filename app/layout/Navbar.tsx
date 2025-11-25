@@ -54,8 +54,8 @@ export default function Navbar() {
           <Link href="/" prefetch={true} className="flex">
             <Image
               src="/create_studio_logo.svg"
-              width={100}
-              height={40}
+              width={150}
+              height={100}
               alt="Create Studio Logo"
               priority
             />
@@ -64,9 +64,9 @@ export default function Navbar() {
           {/* DESKTOP MENU */}
           <nav className="flex justify-between items-center w-full ml-50 text-white">
             <div className="hidden md:flex items-center gap-10 text-base tracking-wide uppercase">
-              <Link href="/work" className="hover:text-orange-400">Work<span className="ml-1 text-xs text-gray-500 group-hover:text-black align-super">5</span></Link>
+              <Link href="/work" className="hover:text-orange-400">Work<span className="ml-1 text-xs bg-white rounded p-0.5 text-gray-500 group-hover:text-black align-super">5</span></Link>
               <Link href="/studio" className="hover:text-orange-400">Studio</Link>
-              <Link href="/whispers" className="hover:text-orange-400">Whispers<span className="ml-1 text-xs text-gray-500 group-hover:text-black align-super">7</span></Link>
+              <Link href="/whispers" className="hover:text-orange-400">Whispers<span className="ml-1 text-xs bg-white rounded p-0.5 text-gray-500 group-hover:text-black align-super">7</span></Link>
             </div>
 
             <Link
