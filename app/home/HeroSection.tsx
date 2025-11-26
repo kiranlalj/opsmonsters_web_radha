@@ -20,19 +20,20 @@ export default function HeroSection() {
       {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/%3E%3C/g%3E%3C/svg%3E')] opacity-100" /> */}
 
       <div className="relative z-20 px-4 sm:px-6 md:px-12 pt-16 sm:pt-24 md:pt-32 max-w-6xl w-full h-full flex flex-col justify-center">
-        
-        <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-20 sm:top-28 md:top-32">
-          —————— // 00.01*
-        </div>
-        <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-36 sm:top-44 md:top-52">
-          —————— // 00.02*
-        </div>
-        <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-52 sm:top-64 md:top-72">
-          —————— // 00.03*
+        <div className="flex flex-col">
+          <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-20 sm:top-28 md:top-32">
+            —————— // 00.01*
+          </div>
+          <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-36 sm:top-44 md:top-52">
+            —————— // 00.02*
+          </div>
+          <div className="hidden sm:block text-white font-mono text-[10px] md:text-[11px] tracking-widest absolute left-4 sm:left-6 md:left-12 top-52 sm:top-64 md:top-72">
+            —————— // 00.03*
+          </div>
         </div>
 
         <h1 className="text-white/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-[0.95] max-w-2xl md:max-w-3xl tracking-tight mb-6 sm:mb-8 md:mb-12">
-          Digital experiences that<br className="hidden sm:block" />
+          Digital experiences that<br className="block sm:hidden" />
           connect, scale and perform.
         </h1>
 
