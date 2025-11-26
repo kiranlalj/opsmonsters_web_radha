@@ -44,6 +44,13 @@ export default function Navbar() {
     });
   };
 
+  useEffect(() => {
+    gsap.fromTo('header',
+      { y: -100 },
+      { y: 0, duration: 4, ease: "power3.out" }
+    );
+  }, []);
+
   return (
     <>
       {/* MAIN NAVBAR */}
