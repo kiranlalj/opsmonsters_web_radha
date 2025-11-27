@@ -3,6 +3,10 @@ import AurelisBeachResort from "./home/AurelisBeachResort";
 import HeroSection from "./home/HeroSection";
 import Blackwell from "./home/Blackwell";
 import Lindholm from "./home/Lindholm";
+import MoreProjects from "./home/MoreProjects";
+import Performance from "./home/Performance";
+import BrandCarousel from "./home/BrandCarousel";
+import Services from "./home/Services";
 
 export default function Home() {
   return (
@@ -11,6 +15,10 @@ export default function Home() {
       <AurelisBeachResort />
       <Blackwell />
       <Lindholm />
+      <MoreProjects />
+      <Performance />
+      <BrandCarousel />
+      <Services />
     </>
   );
 }

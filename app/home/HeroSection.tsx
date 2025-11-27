@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -87,10 +88,10 @@ export default function HeroSection() {
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-wrap gap-5">
                 <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold p-4 rounded-xl text-sm uppercase tracking-wider transition hover:scale-105">
-                  See Work →
+                  See Work <FaArrowRightLong className="inline-block ml-2" />
                 </button>
                 <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium p-4 rounded-xl text-sm uppercase tracking-wider hover:bg-white/20 transition hover:scale-105">
-                  Let’s Chat →
+                  Let’s Chat <FaArrowRightLong className="inline-block ml-2" />
                 </button>
               </div>
             </div>
