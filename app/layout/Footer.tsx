@@ -12,7 +12,7 @@ export default function Footer() {
             Digital experiences that connect,<br /> scale and perform.
           </h2>
 
-          <h1 className="mt-10 text-6xl md:text-[90px] font-bold leading-none">
+          <h1 className="mt-10 text-5xl md:text-[90px] font-bold leading-none">
             <span className="text-[#ff4d30]">Create</span>
             <span className="text-neutral-700">\Studio</span>
           </h1>

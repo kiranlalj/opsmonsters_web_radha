@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export default function Performance() {
   return (
-    <section className="relative bg-black text-white overflow-hidden">
-      <div className="relative z-10 container mx-auto px-8 py-16 md:py-24 flex flex-col justify-between">
-        <div className="flex gap-5 items-center justify-between py-10">
+    <section className="relative bg-black text-white overflow-hidden w-full">
+      <div className="w-full relative z-10 px-8 py-16 md:py-24 flex flex-col justify-between">
+        <div className="w-full flex gap-5 items-center justify-between py-10">
           <div className="flex flex-2/12 items-center">
-            <div className="h-px w-30 bg-white/30" />
+            <div className="h-px w-31 bg-white/30" />
           </div>
 
           <div className="flex w-full max-w-4xl items-center overflow-hidden">
-            <div className="w-8 md:w-12 h-px bg-red-500" />
+            <div className="w-8 md:w-12 h-0.5 bg-red-500" />
             <div className="flex-1 h-px bg-white/20" />
           </div>
 
@@ -24,15 +24,14 @@ export default function Performance() {
               className="opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
-
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-2">
-            <p className="text-white/60 uppercase tracking-widest text-sm font-light rotate-0">
+            <p className="text-white/60 uppercase tracking-widest text-sm font-light rotate-0 mt-5">
               Performance
             </p>
-            <div className="mt-4 w-30 h-px bg-white/20" />
+            <div className="mt-1 w-31 h-5 bg-white/20" />
           </div>
 
           <div className="lg:col-span-8 space-y-12">
@@ -59,7 +58,7 @@ export default function Performance() {
       <section className="relative min-h-screen bg-black text-white overflow-hidden py-20">
         {/* Optional subtle background texture */}
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-black to-zinc-900" />
+          <div className="absolute inset-0 bg-linear-to-br from-zinc-950 via-black to-zinc-900" />
         </div>
 
         <div className="relative z-10 container mx-auto px-8">

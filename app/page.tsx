@@ -7,6 +7,7 @@ import MoreProjects from "./home/MoreProjects";
 import Performance from "./home/Performance";
 import BrandCarousel from "./home/BrandCarousel";
 import Services from "./home/Services";
+import BrandIdentity from "./home/BrandIdentity";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Performance />
       <BrandCarousel />
       <Services />
+      <BrandIdentity />
     </>
   );
 }

@@ -1,11 +1,36 @@
 import React from "react";
 import Image from "next/image";
+import Cursor from "../components/ui/Cursor";
+import gsap from "gsap";
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Lindholm() {
+
+  useEffect(() => {
+    gsap.fromTo(
+      "#lindholm-bg",
+      { scale: 1.5 },
+      {
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#lindholm-section",
+          start: "top bottom",
+          end: "center center",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="relative flex items-center justify-center h-screen w-full overflow-hidden">
-      {/* Background Image - Uses fill */}
-      <div className="absolute inset-0">
+  <>
+    <Cursor />
+    <section id="lindholm-section" className="relative flex items-center justify-center h-screen w-full overflow-hidden cursor-section cursor-none">
+      <div id="lindholm-bg" className="absolute inset-0">
         <Image
           src="/img/lindholm_bg.webp"
           alt="Lindholm"
@@ -16,7 +41,6 @@ export default function Lindholm() {
         />
       </div>
 
-      {/* Dark Overlay (optional - improves text readability) */}
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 flex flex-col justify-between h-full w-full p-10 md:p-20">
@@ -48,5 +72,6 @@ export default function Lindholm() {
         </div>
       </div>
     </section>
+  </>
   );
 }

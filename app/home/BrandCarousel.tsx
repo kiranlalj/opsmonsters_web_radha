@@ -51,6 +51,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import Cursor from "../components/ui/Cursor";
 
 export default function BrandCarousel() {
   const carouselimgs = [
@@ -94,7 +95,6 @@ export default function BrandCarousel() {
 
   return (
     <section className="w-full bg-black py-20 overflow-hidden relative">
-      {/* Title */}
       <h1 className="text-center text-white text-2xl md:text-4xl mb-10 font-medium">
         Brands who are part of our success story
       </h1>
