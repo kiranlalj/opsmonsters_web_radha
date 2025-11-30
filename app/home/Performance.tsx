@@ -84,7 +84,6 @@ export default function Performance() {
       </div>
 
       <section className="relative min-h-screen bg-black text-white overflow-hidden py-20">
-        {/* Optional subtle background texture */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-linear-to-br from-zinc-950 via-black to-zinc-900" />
         </div>

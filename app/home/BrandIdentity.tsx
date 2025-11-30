@@ -33,10 +33,9 @@ export default function BrandIdentity() {
   return (
     <section className="relative brand-section w-full px-6 sm:px-10 py-16 overflow-hidden flex flex-col">
 
-      {/* 🔥 Blur Parallax Mask */}
+      {/*Blur Parallax Mask */}
       <div className="blur-mask pointer-events-none absolute top-0 left-0 w-full h-40 bg-white/0 backdrop-blur-[0px] z-50"></div>
 
-      {/* Top Title */}
       <div className="flex flex-col gap-4 mt-10">
         <p className="text-gray-500 text-xs sm:text-sm tracking-wider">
           FOUNDATION
@@ -48,7 +47,6 @@ export default function BrandIdentity() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="flex flex-col mt-10">
         <h1 className="py-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight">
           Brand Identity
@@ -56,7 +54,6 @@ export default function BrandIdentity() {
 
         <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-20">
           
-          {/* Left */}
           <div className="flex flex-col max-w-md">
             <Image
               src="/img/brandIdentity.jpg"
@@ -73,7 +70,6 @@ export default function BrandIdentity() {
             </p>
           </div>
 
-          {/* Right */}
           <div className="flex flex-col">
             <ul className="flex flex-col text-sm sm:text-base gap-4 sm:gap-5 text-black/60">
               <li><span className="text-red-500 font-bold">+ </span> Positioning and messaging frameworks</li>

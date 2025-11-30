@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ParallaxVideo() {
 
   useEffect(() => {
-    // set initial state FIRST
     gsap.set(".scroll-line", {
       opacity: 0,
       y: 100,
@@ -32,7 +31,6 @@ export default function ParallaxVideo() {
     <section id="video-section" className="relative h-screen w-full">
       <div className="overflow-hidden h-full w-full relative">
 
-        {/* Background Video */}
         <video
           autoPlay
           muted
@@ -44,7 +42,6 @@ export default function ParallaxVideo() {
           <source src="/videos/bg_flowergirl.mp4" type="video/mp4" />
         </video>
 
-        {/* TEXT */}
         <div id="textScrolltrigger" className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-5 md:space-y-10 leading-none px-8">
             <h1 className="scroll-line text-6xl font-black text-white">Lets Create</h1>

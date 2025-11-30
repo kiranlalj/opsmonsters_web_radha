@@ -33,7 +33,6 @@ export default function AurelisBeachResort() {
         id="aurelis-section"
         className="relative flex items-center justify-center h-screen w-full overflow-hidden cursor-section cursor-none"
       >
-        {/* Background Image */}
         <div id="aurelis-bg" className="absolute inset-0">
           <Image
             src="/img/aurelis_beach_resort.jpeg"
@@ -45,7 +44,6 @@ export default function AurelisBeachResort() {
           />
         </div>
 
-        {/* CONTENT */}
         <div className="relative z-10 flex flex-col justify-between h-full w-full p-10 md:p-20">
           <div className="self-start">
             <Image

@@ -9,11 +9,9 @@ export default function Cursor() {
 
     if (!bigmouse || sections.length === 0) return;
 
-    // Store last mouse position
     let mouseX = 0;
     let mouseY = 0;
 
-    // 🟠 FAST, NO-LAG CURSOR FOLLOW
     const moveCursor = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
@@ -23,12 +21,10 @@ export default function Cursor() {
 
     window.addEventListener("mousemove", moveCursor);
 
-    // Hide cursor when mouse leaves window
     window.addEventListener("mouseleave", () => {
       bigmouse.classList.add("scale-0", "opacity-0");
     });
 
-    // Detect if mouse is inside a section WHILE SCROLLING
     const detectScrollPosition = () => {
       const elUnderMouse = document.elementFromPoint(mouseX, mouseY);
 
@@ -45,7 +41,6 @@ export default function Cursor() {
 
     window.addEventListener("scroll", detectScrollPosition);
 
-    // IntersectionObserver helps if section enters view without mouse movement
     const observer = new IntersectionObserver(
       () => detectScrollPosition(),
       { threshold: 0.3 }

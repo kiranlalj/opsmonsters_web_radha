@@ -41,7 +41,6 @@ export default function Blackwell() {
           />
         </div>
 
-        {/* Dark Overlay (optional - improves text readability) */}
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 flex flex-col justify-between h-full w-full p-10 md:p-20">

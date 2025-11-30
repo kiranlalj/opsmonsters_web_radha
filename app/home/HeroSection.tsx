@@ -82,7 +82,6 @@ export default function HeroSection() {
   return (
     <>
           <section id="hero-section" className="pin relative h-screen"> 
-            {/* Background Image */}
             <div id="parallax_bg_content" className="absolute inset-0 z-20 h-screen w-full overflow-hidden">
               <div className="bg_img">
                 <Image 
@@ -133,7 +132,6 @@ export default function HeroSection() {
                       </div>
                     </div> 
 
-                    {/* Showreel Card*/} 
                     <div id="text_animation" className="flex flex-col items-end gap-1">
                       <div className="w-full flex items-center gap-4 px-5">
                         <span className="text-white/90 text-sm uppercase tracking-[0.2em] font-semibold"> Showreel </span>

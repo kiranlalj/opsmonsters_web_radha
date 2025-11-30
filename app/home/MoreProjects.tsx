@@ -11,7 +11,6 @@ export default function MoreProjects() {
 
         <div className="flex-1 h-px bg-white/20"></div>
 
-        {/* BUTTON */}
         <AnimatedButton />
 
         <p className="text-white">
