@@ -8,6 +8,8 @@ import Performance from "./home/Performance";
 import BrandCarousel from "./home/BrandCarousel";
 import Services from "./home/Services";
 import BrandIdentity from "./home/BrandIdentity";
+import Howwework from "./home/Howwework";
+import ServicesProsss from "./home/ServicesProsss";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <BrandCarousel />
       <Services />
       <BrandIdentity />
+      <Howwework />
+      <ServicesProsss />
     </>
   );
 }
