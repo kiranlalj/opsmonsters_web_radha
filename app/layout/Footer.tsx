@@ -2,56 +2,79 @@
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-neutral-300 bg-white px-6 md:px-12 py-16 text-neutral-700">
-      {/* TOP SECTION */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="w-full bg-gray-100 px-6 md:px-12 py-16 text-neutral-700">
+      <div className="grid grid-cols-1 md:grid-cols-2 col-span-12 gap-12">
 
-        {/* LEFT — Branding */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-semibold">
-            Digital experiences that connect,<br /> scale and perform.
+        <div className="">
+          <div className="flex w-full max-w-4xl items-center overflow-hidden">
+            <div className="w-8 md:w-12 h-0.5 bg-red-500" />
+            <div className="flex-1 h-px bg-black/30" />
+          </div>
+
+          <h2 className="text-xl md:text-[24px] font-normal mt-7">
+            Digital experiences that connect, <br /> scale and perform.
           </h2>
 
-          <h1 className="mt-10 text-5xl md:text-[90px] font-bold leading-none">
+          <h1 className="my-7 text-5xl md:text-[80px] font-bold leading-none">
             <span className="text-[#ff4d30]">Create</span>
-            <span className="text-neutral-700">\Studio</span>
+            <span className="text-[#797c81]">\Studio</span>
           </h1>
 
-          <p className="mt-6 max-w-sm text-sm leading-relaxed">
-            A creative agency for design, strategy, marketing,
-            and scalable premium websites.
-          </p>
+          <div className="flex gap-5 items-center overflow-hidden">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-20 h-11 object-cover rounded-4xl"
+            >
+              <source src="/videos/footer_video.mp4" type="video/mp4" />
+            </video>
 
-          <p className="mt-10 text-xs">&copy;2025 Create Studio — All work, all rights.</p>
+            <p className="max-w-sm text-sm leading-relaxed">
+              A creative agency for design, strategy, marketing,
+              and scalable premium websites.
+            </p>
+          </div>
+
+          <p className="mt-10 text-sm">&copy;2025 Create Studio — All work, all rights.</p>
         </div>
 
-        {/* MIDDLE — Address */}
-        <div>
-          <p className="font-semibold text-xs mb-3 text-neutral-500">OFFLINE</p>
-          <p className="text-sm leading-6">
-            Create Studio LLC.<br />
-            8 Sunset Blvd, Office 5<br />
-            Los Angeles, CA 90026
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <p className="font-semibold text-xs text-neutral-500">OFFLINE</p>
+            <div className="flex w-full max-w-4xl items-center overflow-hidden my-3">
+              <div className="w-8 md:w-12 h-0.5 bg-red-500" />
+              <div className="flex-1 h-px bg-black/30" />
+            </div>
+            <p className="text-sm leading-6">
+              Create Studio LLC.<br />
+              8 Sunset Blvd, Office 5<br />
+              Los Angeles, CA 90026
+            </p>
+          </div>
 
-          <p className="mt-10 font-semibold text-xs mb-3 text-neutral-500">PHONE</p>
-          <p className="text-4xl font-medium text-neutral-700">
-            (310) 555-0165
-          </p>
+          <div>
+            <p className="font-semibold text-xs text-neutral-500">ONLINE</p>
+            <div className="flex w-full max-w-4xl items-center overflow-hidden my-3">
+              <div className="w-8 md:w-12 h-0.5 bg-red-500" />
+              <div className="flex-1 h-px bg-black/30" />
+            </div>
+            <p className="text-sm text-[#ff4d30] font-medium">hello@create.com</p>
+          </div>
+
+          <div>
+            <p className="mt-10 font-semibold text-xs text-neutral-500">PHONE</p>
+            <div className="flex w-full max-w-4xl items-center overflow-hidden my-3">
+              <div className="w-8 md:w-12 h-0.5 bg-red-500" />
+              <div className="flex-1 h-px bg-black/30" />
+            </div>
+            <p className="text-4xl font-medium text-neutral-700">
+              (310) 555-0165
+            </p>
+          </div>
         </div>
 
-        {/* RIGHT — Contact */}
-        <div>
-          <p className="font-semibold text-xs mb-3 text-neutral-500">ONLINE</p>
-          <p className="text-sm text-[#ff4d30] font-medium">hello@create.com</p>
-        </div>
-      </div>
-
-      {/* BOTTOM MINI FOOTER */}
-      <div className="mt-20 flex items-center gap-6 text-xs text-neutral-500">
-        <span>Create® Design Studio</span>
-        <span>⚬</span>
-        <span>Developed by Opsmonsters</span>
       </div>
     </footer>
   );

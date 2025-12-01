@@ -35,13 +35,6 @@ export default function HeroSection() {
     }
   );
 
-  // ScrollTrigger.create({
-  //   trigger: "#hero-section",
-  //   pin: true,
-  //   start: "top top",
-  //   end: "+=200%",
-  // });
-
   }, []); 
 
   useEffect(() => {

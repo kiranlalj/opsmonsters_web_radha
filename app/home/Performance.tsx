@@ -9,22 +9,20 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Performance() {
 
   useEffect(() => {
-    const timelineanimation = gsap.timeline();
-
-    timelineanimation.fromTo(
-    "#text_animation",
+    
+    gsap.fromTo(
+    "#performance_title, #performance_subtitle",
     { y: 50, opacity: 0 },
     {
       y: 0,
       opacity: 1,
-      duration: 1.5,
-      stagger: 0.3,
-      ease: "power3.out",
+      duration: 1,
+      stagger: 0.1,
+      ease: "power4.out",
       scrollTrigger: {
         trigger: "#performance_section",
         start: "top 20%",
-        end: "bottom 50%",
-        toggleActions: "play none none reverse",
+        scrub: 1,
       },
     }
   );
@@ -64,12 +62,12 @@ export default function Performance() {
           </div>
 
           <div className="lg:col-span-8 space-y-12">
-            <h1 id="text_animation" className="text-6xl md:text-8xl lg:text-7xl font-bold leading-tight text-white/95">
+            <h1 id="performance_title" className="text-6xl md:text-8xl lg:text-7xl font-bold leading-tight text-white/95">
               The proof behind<br />
               <span className="text-white/80">our work</span>
             </h1>
 
-            <p id="text_animation" className="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+            <p id="performance_subtitle" className="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
               <span className="inline-block w-12 h-px bg-white/40 mr-4 align-middle" />
               From first launches to lasting collaborations, we’re trusted to
               deliver on time and at quality.
