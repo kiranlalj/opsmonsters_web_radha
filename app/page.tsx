@@ -9,7 +9,8 @@ import BrandCarousel from "./home/BrandCarousel";
 import Services from "./home/Services";
 import BrandIdentity from "./home/BrandIdentity";
 import Howwework from "./home/Howwework";
-import ServicesProsss from "./home/ServicesProsss";
+import ServicesProsss from "./home/ServicesProcess";
+import Whychooseus from "./home/Whychooseus";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <BrandIdentity />
       <Howwework />
       <ServicesProsss />
+      <Whychooseus />
     </>
   );
 }

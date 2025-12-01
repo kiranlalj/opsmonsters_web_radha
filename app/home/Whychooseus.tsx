@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Howwework() {
+export default function Whychooseus() {
 
   useEffect(() => {
     
@@ -20,7 +20,7 @@ export default function Howwework() {
         ease: "power4.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: "#Howwework_section",
+          trigger: "#Whychooseus_section",
           start: "top 50%",
           scrub: 1,
         },
@@ -30,7 +30,7 @@ export default function Howwework() {
     }, []); 
 
   return (
-    <section id="Howwework_section" className="relative bg-black text-white overflow-hidden w-full">
+    <section id="Whychooseus_section" className="relative bg-black text-white overflow-hidden w-full">
       <div className="w-full relative z-10 px-8 py-16 md:py-24 flex flex-col justify-between">
         <div className="w-full flex gap-5 items-center justify-between py-10">
           <div className="flex flex-2/12 items-center">
@@ -56,7 +56,7 @@ export default function Howwework() {
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-2">
             <p className="text-white/60 uppercase tracking-widest text-sm font-light rotate-0 mt-5">
-              How we work
+              Why choose us
             </p>
             <div className="mt-1 w-31 h-5 bg-white/20" />
           </div>

@@ -39,21 +39,15 @@ export default function AnimatedButton() {
   }, []);
 
   return (
-    <button
-      ref={btnRef}
-      className="
-        relative w-14 h-14 bg-orange-600 
-        rounded-2xl flex items-center justify-center
-        overflow-hidden cursor-pointer
-      "
-    >
+    <button ref={btnRef} className="relative w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center
+        overflow-hidden cursor-pointer">
       {/* Default Arrow */}
       <div
         ref={arrowMainRef}
         className="absolute"
         style={{ opacity: 1 }}
       >
-        <FaArrowRightLong className="text-2xl text-white" />
+        <FaArrowRightLong className="text-xl text-white" />
       </div>
 
       {/* Hover Arrow */}
@@ -62,7 +56,7 @@ export default function AnimatedButton() {
         className="absolute"
         style={{ opacity: 0 }}
       >
-        <FaArrowRightLong className="text-2xl text-white" />
+        <FaArrowRightLong className="text-xl text-white" />
       </div>
     </button>
   );

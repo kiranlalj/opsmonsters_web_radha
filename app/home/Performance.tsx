@@ -2,33 +2,34 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Performance() {
 
   useEffect(() => {
-    
-    const textanimation = gsap.timeline()
+    const timelineanimation = gsap.timeline();
 
-    textanimation.fromTo(
-      "#text_animation",
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        stagger: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#performance_section",
-          start: "top 50%",
-          end: "bottom 50%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    timelineanimation.fromTo(
+    "#text_animation",
+    { y: 50, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      stagger: 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#performance_section",
+        start: "top 20%",
+        end: "bottom 50%",
+        toggleActions: "play none none reverse",
+      },
+    }
+  );
 
-  }, [])
+  }, []); 
 
   return (
     <section id="performance_section" className="relative bg-black text-white overflow-hidden w-full">
