@@ -1,7 +1,14 @@
-import React from 'react'
+"use client";
+import Contacthero from './contact_hero';
+import Inspire from './inspire';
+import Newsletter from './newsletter';
 
 export default function Contact() {
   return (
-    <div>Contact page</div>
+    <>
+      <Contacthero />
+      <Inspire />
+      <Newsletter />
+    </>
   )
 }

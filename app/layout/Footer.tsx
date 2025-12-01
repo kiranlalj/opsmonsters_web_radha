@@ -1,8 +1,39 @@
 "use client";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+
+  useEffect(() => {
+  gsap.fromTo(
+    "#footer_section",
+    {
+      opacity: 0,
+      scale: 0.8,
+      transformOrigin: "center center",
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      ease: "power3.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#footer_section",
+        start: "top 80%",
+        end: "top 60%",
+        scrub: 1,
+      },
+    }
+  );
+}, []);
+
+
+
   return (
-    <footer className="w-full bg-gray-100 px-6 md:px-12 py-16 text-neutral-700">
+    <footer id="footer_section" className="w-full bg-gray-100 px-6 md:px-12 py-16 text-neutral-700">
       <div className="grid grid-cols-1 md:grid-cols-2 col-span-12 gap-12">
 
         <div className="">
