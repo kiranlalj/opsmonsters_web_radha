@@ -45,7 +45,7 @@ export default function BrandCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-black py-20 overflow-hidden relative">
+    <section className="w-full bg-black py-20 px-5 sm:px-20 overflow-hidden relative">
       <h1 className="text-center text-white text-2xl md:text-4xl mb-10 font-medium">
         Brands who are part of our success story
       </h1>
