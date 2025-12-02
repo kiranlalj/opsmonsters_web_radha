@@ -74,7 +74,7 @@ export default function HeroSection() {
   
   return (
     <>
-          <section id="hero-section" className="pin relative h-screen"> 
+          <section id="hero-section" className="pin relative h-screen overflow-hidden"> 
             <div id="parallax_bg_content" className="absolute inset-0 z-20 h-screen w-full overflow-hidden">
               <div className="bg_img">
                 <Image 
@@ -87,8 +87,8 @@ export default function HeroSection() {
                 />
               </div> 
 
-              <div id="parallax-content" className="relative max-w-full flex justify-between pt-20 px-7 z-20">
-                <div className="hidden md:flex flex-col gap-[150px] text-white font-mono text-[10px] leading-tight">
+              <div id="parallax-content" className="relative max-w-full flex justify-between pt-35 px-20 z-20">
+                <div className="hidden md:flex flex-col gap-[200px] text-white font-mono text-base leading-tight">
                   <p>————— // 00.01*</p>
                   <p>————— // 00.02*</p>
                   <p>————— // 00.03*</p>
@@ -96,17 +96,17 @@ export default function HeroSection() {
 
                 <div id="text_animation" className="max-w-full pl-0 sm:pl-[50px] flex flex-10/12 flex-col">
                   <div className="flex justify-between w-full">
-                    <h5 className="flex-2 text-white text-left text-2xl sm:text-4xl pl-0 sm:pl-[150px]"> Digital experiences that <br className="hidden sm:block" /> connect, scale and perform. </h5>
+                    <h5 className="flex-2 text-white text-left text-2xl sm:text-4xl lg:text-5xl xl:text-5xl pl-0 sm:pl-[170px]"> Digital experiences that <br className="hidden sm:block" /> connect, scale and perform. </h5>
                     <div className="flex flex-1 flex-col items-end mb-6 text-right">
                       <h5 className="text-orange-500 text-5xl sm:text-4xl lg:text-6xl font-normal leading-none"> 120+ </h5>
-                      <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-[0.3em] mt-2"> Quietly making noise for <br />
+                      <p className="text-white/80 text-[10px] sm:text-lg uppercase tracking-[0.3em] mt-2"> Quietly making noise for <br />
                         <span>brands worldwide</span>
                       </p>
                     </div>
                   </div>
 
                   <div id="text_animation" className="flex">
-                    <h1 className="text-4xl md:text-8xl font-bold">
+                    <h1 className="text-4xl md:text-7xl lg:text-9xl xl:text-[150px] font-bold mt-22">
                       <span className="text-orange-500">Create </span>
                       <span className="text-white">/ Studio</span>
                     </h1>
@@ -114,8 +114,9 @@ export default function HeroSection() {
 
                   <div id="text_animation" className="flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center relative">
                     <div className="flex flex-col">
-                      <p className="text-white/70 text-sm uppercase tracking-wider font-light mt-8 max-w-xl leading-relaxed"> A design studio trusted by startups and leading brands. <br /> We create stories people remember. </p>
-                      <p className="text-white/60 text-xs uppercase tracking-widest mt-6"> OUR TIME 10:59:21 <br /> UTC−8 • LOS ANGELES </p> {/* CTA Buttons */} <div className="mt-10 flex flex-wrap gap-5">
+                      <p className="text-white/80 text-sm sm:text-lg uppercase tracking-wider font-light mt-8 max-w-xl leading-relaxed"> A design studio trusted by startups and leading brands. We create stories people remember. </p>
+                      <div className="mt-5 w-10 h-px bg-white/90"></div>
+                      <p className="text-white/80 text-xs sm:text-lg uppercase tracking-widest mt-6"> OUR TIME 10:59:21 <br /> UTC−8 • LOS ANGELES </p> {/* CTA Buttons */} <div className="mt-10 flex flex-wrap gap-5">
                         <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold p-4 rounded-xl text-sm uppercase tracking-wider transition hover:scale-105"> See Work
                           <FaArrowRightLong className="inline-block ml-2" />
                         </button>
@@ -125,14 +126,14 @@ export default function HeroSection() {
                       </div>
                     </div> 
 
-                    <div id="text_animation" className="flex flex-col items-end gap-1">
+                    <div id="text_animation" className="flex flex-col items-end gap-2">
                       <div className="w-full flex items-center gap-4 px-5">
-                        <span className="text-white/90 text-sm uppercase tracking-[0.2em] font-semibold"> Showreel </span>
-                        <div className="w-20 h-px bg-white"></div>
-                        <span className="text-white/60 text-xs uppercase tracking-widest"> 1/2025 </span>
+                        <span className="text-white/90 text-sm sm:text-base uppercase tracking-[0.2em] font-semibold"> Showreel </span>
+                        <div className="w-40 h-px bg-white"></div>
+                        <span className="text-white/70 text-sm uppercase tracking-widest"> 1/2025 </span>
                       </div>
 
-                      <div className="relative w-[340px] sm:w-[380px] md:w-[300px] xl:w-[300px] aspect-video rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-black/20 backdrop-blur-xl">
+                      <div className="relative w-[340px] sm:w-[380px] md:w-[300px] lg:w-[300px] xl:w-[400px] aspect-video rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-black/20 backdrop-blur-xl">
                         <video 
                           autoPlay 
                           muted 
@@ -140,13 +141,12 @@ export default function HeroSection() {
                           playsInline 
                           className="w-full h-full object-cover" 
                           poster="/videos/showreel-poster.jpg">
-                          <source src="/videos/hero_showreel.webm" type="video/webm" />
                           <source src="/videos/hero_showreel.mp4" type="video/mp4" />
                         </video>
                       </div>
 
                       <div className="w-full pl-5 text-left">
-                        <p className="text-white/70 text-[10px] uppercase tracking-widest leading-tight"> Best Digital Campaign, <span className="font-bold text-white/90 tracking-[0.2em]"> Worbly Awards </span>
+                        <p className="text-white/70 text-[10px] sm:text-sm uppercase tracking-widest leading-tight"> Best Digital Campaign, <span className="font-bold text-white/90 tracking-[0.2em]"> Worbly Awards </span>
                         </p>
                       </div>
                     </div>

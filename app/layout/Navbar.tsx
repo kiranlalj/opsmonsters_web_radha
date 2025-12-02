@@ -57,8 +57,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/10 border-b border-white/20">
         <div className="flex justify-between items-center px-6 md:px-12 lg:px-20 h-16">
           
-          {/* LOGO */}
-          <Link href="/" prefetch={true} className="flex">
+          <Link href="/" prefetch={true} className="flex ">
             <Image
               src="/create_studio_logo.svg"
               width={150}
@@ -101,7 +100,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       <div
         ref={menuRef}
-        className={`fixed inset-0 bg-white/95 backdrop-blur-xl text-black z-[999]
+        className={`fixed inset-0 bg-white/95 backdrop-blur-xl text-black z-999
         transition-all duration-300 
         ${open ? "pointer-events-auto" : "pointer-events-none opacity-0"}`}
       >
