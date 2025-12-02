@@ -43,7 +43,7 @@ export default function Blackwell() {
 
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 flex flex-col justify-between h-full w-full p-10 md:p-20">
+        <div className="relative z-10 flex flex-col justify-between h-full w-full p-5 md:p-20">
           
           <div className="self-start">
             <Image

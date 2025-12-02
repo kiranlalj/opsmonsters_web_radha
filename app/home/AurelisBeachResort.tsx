@@ -44,7 +44,7 @@ export default function AurelisBeachResort() {
           />
         </div>
 
-        <div className="relative z-10 flex flex-col justify-between h-full w-full p-10 md:p-20">
+        <div className="relative z-10 flex flex-col justify-between h-full w-full p-5 md:p-20">
           <div className="self-start">
             <Image
               src="/img/Aurelis_logo.svg"

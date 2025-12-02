@@ -5,7 +5,7 @@ export default function MoreProjects() {
   
   return (
     <section className="w-full flex">
-      <div className="flex justify-center items-center gap-4 w-full mx-auto p-10 bg-[#141414]">
+      <div className="flex justify-center items-center w-full mx-auto p-5 sm:p-20 bg-[#141414]">
 
         <p className="text-white">2017–2025</p>
 
@@ -13,7 +13,7 @@ export default function MoreProjects() {
 
         <AnimatedButton />
 
-        <p className="text-white">
+        <p className="text-white pl-5">
           More Projects <span className="text-gray-400 align-super text-xs">5</span>
         </p>
 

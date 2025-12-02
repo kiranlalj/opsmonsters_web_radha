@@ -31,13 +31,13 @@ export default function Performance() {
 
   return (
     <section id="performance_section" className="relative bg-black text-white overflow-hidden w-full">
-      <div className="w-full relative z-10 px-8 py-16 md:py-24 flex flex-col justify-between">
+      <div className="w-full relative z-10 p-5 sm:px-20 py-16 md:py-24 flex flex-col justify-between">
         <div className="w-full flex gap-5 items-center justify-between py-10">
           <div className="flex flex-2/12 items-center">
             <div className="h-px w-31 bg-white/30" />
           </div>
 
-          <div className="flex w-full max-w-4xl items-center overflow-hidden">
+          <div className="flex w-full items-center overflow-hidden">
             <div className="w-8 md:w-12 h-0.5 bg-red-500" />
             <div className="flex-1 h-px bg-white/20" />
           </div>

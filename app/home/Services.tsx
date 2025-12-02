@@ -24,10 +24,10 @@ export default function Services() {
   }, []);
 
   return (
-    <section className='p-7 md:p-10 overflow-hidden'>
+    <section className='p-7 md:p-20 overflow-hidden'>
       <div id='services' className="flex flex-col">
-        <h1 className='text-6xl md:text-[230px] font-black'>Services</h1>
-        <p className='text-[10px] text-black/60 uppercase'>What we do best, And what your next project Needs Most</p>
+        <h1 className='text-6xl md:text-[230px] xl:text-[350px] font-black'>Services</h1>
+        <p className='text-base md:text-xl text-black/60 uppercase'>What we do best, And what your next project Needs Most</p>
       </div>
     </section>
   )

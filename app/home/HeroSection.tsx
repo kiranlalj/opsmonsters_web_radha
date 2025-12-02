@@ -41,7 +41,7 @@ export default function HeroSection() {
     
     gsap.to("#scrollTextComingFromBelow", {
       opacity: 1,
-      // scale: 1.5,
+      scale: 1.5,
       y: 100,
       duration: 2,
       scrollTrigger: {
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 />
               </div> 
 
-              <div id="parallax-content" className="relative max-w-full flex justify-between pt-35 px-20 z-20">
+              <div id="parallax-content" className="relative max-w-full flex justify-between pt-35 px-5 sm:px-20 z-20">
                 <div className="hidden md:flex flex-col gap-[200px] text-white font-mono text-base leading-tight">
                   <p>————— // 00.01*</p>
                   <p>————— // 00.02*</p>
@@ -106,7 +106,7 @@ export default function HeroSection() {
                   </div>
 
                   <div id="text_animation" className="flex">
-                    <h1 className="text-4xl md:text-7xl lg:text-9xl xl:text-[150px] font-bold mt-22">
+                    <h1 className="text-5xl md:text-7xl lg:text-9xl xl:text-[150px] font-bold mt-5 sm:mt-22 ">
                       <span className="text-orange-500">Create </span>
                       <span className="text-white">/ Studio</span>
                     </h1>
@@ -126,7 +126,7 @@ export default function HeroSection() {
                       </div>
                     </div> 
 
-                    <div id="text_animation" className="flex flex-col items-end gap-2">
+                    <div id="text_animation" className="hidden sm:flex flex-col items-end gap-2">
                       <div className="w-full flex items-center gap-4 px-5">
                         <span className="text-white/90 text-sm sm:text-base uppercase tracking-[0.2em] font-semibold"> Showreel </span>
                         <div className="w-40 h-px bg-white"></div>
@@ -153,7 +153,7 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
-              <h1 id="scrollTextComingFromBelow" className=" text-6xl font-black text-white text-center">Lets Create</h1>
+              <h1 id="scrollTextComingFromBelow" className=" text-5xl sm:text-6xl font-black text-white text-center">Lets Create</h1>
             </div>
       </section>
 
@@ -172,10 +172,10 @@ export default function HeroSection() {
 
           <div id="textScrolltrigger" className="absolute inset-0 flex items-center justify-center">
             <div className="text-center space-y-5 md:space-y-10 leading-none px-8">
-              <h1 className="scroll-line text-6xl font-black text-white">We Listen</h1>
-              <h1 className="scroll-line text-6xl font-black text-white">We Imagine</h1>
-              <h1 className="scroll-line text-6xl font-black text-red-600">We Create</h1>
-              <h1 className="scroll-line text-6xl font-black text-white">beautiful things</h1>
+              <h1 className="scroll-line text-6xl xl:text-[170px] font-black text-white">We Listen</h1>
+              <h1 className="scroll-line text-6xl xl:text-[170px] font-black text-white">We Imagine</h1>
+              <h1 className="scroll-line text-6xl xl:text-[170px] font-black text-red-600">We Create</h1>
+              <h1 className="scroll-line text-6xl xl:text-[170px] font-black text-white">beautiful things</h1>
             </div>
           </div>
 

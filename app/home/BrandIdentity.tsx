@@ -31,7 +31,7 @@ export default function BrandIdentity() {
   }, []);
 
   return (
-    <section className="relative brand-section w-full px-6 sm:px-10 py-16 overflow-hidden flex flex-col">
+    <section className="relative brand-section w-full px-10 sm:px-20 py-16 overflow-hidden flex flex-col">
 
       {/*Blur Parallax Mask */}
       <div className="blur-mask pointer-events-none absolute top-0 left-0 w-full h-40 bg-white/0 backdrop-blur-[0px] z-50"></div>
