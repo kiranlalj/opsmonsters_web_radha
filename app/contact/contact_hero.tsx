@@ -7,11 +7,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactHero() {
+  /** Reveal mask animation */
   useEffect(() => {
     const mask = document.getElementById("reveal-mask");
     if (!mask) return;
 
-    mask.style.transformOrigin = "center bottom";
     gsap.set(mask, { transformOrigin: "50% 100%" });
 
     const run = () => {
@@ -26,124 +26,166 @@ export default function ContactHero() {
       );
     };
 
-    if (document.readyState === "complete") {
-      run();
-    } else {
+    if (document.readyState === "complete") run();
+    else {
       window.addEventListener("load", run, { once: true });
-      // safety: also run after a short timeout if load isn't fired for some reason
       const t = setTimeout(run, 700);
       return () => clearTimeout(t);
     }
-
-    return () => {};
   }, []);
 
+  /** Scroll animation */
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    if (!document.getElementById("form_section")) return;
-
     gsap.fromTo(
       "#form_title, #contact_form",
-      { y: 50, opacity: 0 },
+      { y: 70, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 1.0,
-        stagger: 0.25,
+        duration: 1,
+        stagger: 0.3,
         ease: "power3.out",
         scrollTrigger: {
           trigger: "#form_section",
-          start: "top 55%",
-          toggleActions: "play none none reverse",
+          start: "top 70%",
         },
       }
     );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
   }, []);
 
   return (
     <section
       id="form_section"
-      className="relative w-full grid grid-cols-1 lg:grid-cols-2 min-h-screen overflow-hidden">
+      className="
+        relative w-full min-h-screen 
+        grid grid-cols-1 lg:grid-cols-2 
+        overflow-hidden
+      "
+    >
+      {/* Reveal Mask */}
       <div
         id="reveal-mask"
-        style={{ transformOrigin: "center bottom" }}
-        className="absolute inset-0 bg-white z-20 origin-bottom pointer-events-none"></div>
+        className="absolute inset-0 bg-white z-20 pointer-events-none"
+      ></div>
 
-      <div className="relative h-[60vh] lg:h-auto">
+      {/* LEFT SIDE - IMAGE */}
+      <div className="relative h-[55vh] lg:h-screen xl:h-[100vh]">
         <Image
           src="/img/contact_form_hero_bg.webp"
-          alt="hero BG"
+          alt="Contact Background"
           fill
-          className="object-cover"
           priority
+          className="object-cover"
         />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 flex flex-col justify-end px-8 md:px-16 pb-20 bg-gradient-to-t from-black/40 to-transparent">
-          <h1 className="text-white text-[42px] md:text-[65px] font-bold leading-[1.1]">
-            Thinking about <br /> your next move?
+        {/* Bottom-left heading */}
+        <div
+          className="
+            absolute inset-0 flex flex-col justify-end
+            px-6 sm:px-10 md:px-16 xl:px-24
+            pb-16
+            bg-gradient-to-t from-black/40 to-transparent
+          "
+        >
+          <h1
+            className="
+              text-white font-bold leading-[1.08]
+              text-[40px] sm:text-[52px] md:text-[62px]
+              lg:text-[70px] xl:text-[78px]
+              w-full
+            "
+          >
+            Thinking about your next move?
           </h1>
 
-          <p className="text-white/90 mt-6 text-base md:text-xl">
+          <p
+            className="
+              text-white/90 mt-6
+              text-base sm:text-lg md:text-xl 
+              max-w-lg
+            "
+          >
             Let’s discuss how Create® can help make it real.
           </p>
         </div>
       </div>
 
-      <div className="bg-white px-5 md:px-10 py-16 flex flex-col justify-start">
+{/* ------------------------------------- */}
+
+      <div className="bg-white px-6 sm:px-8 md:px-12 xl:px-20 py-20 flex flex-col justify-center">
+        {/* FORM TITLE */}
         <div id="form_title">
-          <h1 className="text-[70px] md:text-[100px] font-semibold leading-none">
-            Let’s talk!
+          <h1 className="
+              font-semibold leading-[0.92]
+              text-[70px] sm:text-[85px] md:text-[100px]
+              lg:text-[118px] xl:text-[130px]">
+            Let&apos;s talk!
           </h1>
 
-          <p className="text-gray-500 text-lg mt-6">
+          <p className="text-gray-500 text-base sm:text-lg mt-6 max-w-md">
             We&apos;d love to hear from you and your team.
           </p>
         </div>
 
-        <form id="contact_form" className="mt-4 max-w-xl gap-1">
-          <div>
-            <input
-              type="text"
-              placeholder="YOUR NAME"
-              className="w-full border-b border-gray-300 pt-4 pb-2 focus:outline-none focus:border-orange-500 placeholder-gray-400"
-            />
-          </div>
+        {/* FORM */}
+        <form
+          id="contact_form"
+          className="mt-12 flex flex-col gap-10 max-w-lg text-gray-800"
+        >
+          <input
+            type="text"
+            placeholder="Your name"
+            className="
+              w-full border-b border-gray-300 pb-3
+              focus:outline-none focus:border-orange-500
+              placeholder-gray-400
+            "
+          />
 
-          <div>
-            <input
-              type="text"
-              placeholder="Company"
-              className="w-full border-b border-gray-300 pt-4 pb-2 focus:outline-none focus:border-orange-500 placeholder-gray-400"
-            />
-          </div>
+          <input
+            type="text"
+            placeholder="Company"
+            className="
+              w-full border-b border-gray-300 pb-3
+              focus:outline-none focus:border-orange-500
+              placeholder-gray-400
+            "
+          />
 
-          <div>
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border-b border-gray-300 pt-4 pb-2 focus:outline-none focus:border-orange-500 placeholder-gray-400"
-            />
-          </div>
+          <input
+            type="email"
+            placeholder="Email"
+            className="
+              w-full border-b border-gray-300 pb-3
+              focus:outline-none focus:border-orange-500
+              placeholder-gray-400
+            "
+          />
 
-          <div>
-            <textarea
-              rows={2}
-              placeholder="Your message"
-              className="w-full border-b border-gray-300 pt-4 pb-2 focus:outline-none focus:border-orange-500 placeholder-gray-400"
-            />
-          </div>
+          <textarea
+            rows={3}
+            placeholder="Your message"
+            className="
+              w-full border-b border-gray-300 pb-3
+              focus:outline-none focus:border-orange-500
+              placeholder-gray-400
+            "
+          />
 
+          {/* Submit */}
           <div className="flex items-center gap-6 pt-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-5 rounded-xl text-sm tracking-wider transition-all">
+            <button
+              className="
+                bg-orange-500 hover:bg-orange-600
+                text-white py-3 px-6
+                rounded-xl text-sm tracking-wider
+                transition-all
+              "
+            >
               SUBMIT →
             </button>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 max-w-sm">
               By submitting, you agree to our{" "}
               <span className="underline cursor-pointer">Terms & Service.</span>
             </p>
