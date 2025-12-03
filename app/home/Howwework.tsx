@@ -31,56 +31,67 @@ export default function Howwework() {
 
   return (
     <section id="Howwework_section" className="relative bg-black text-white overflow-hidden w-full">
-      <div className="w-full relative z-10 px-8 py-16 md:py-24 flex flex-col justify-between">
-        <div className="w-full flex gap-5 items-center justify-between py-10">
-          <div className="flex flex-2/12 items-center">
-            <div className="h-px w-31 bg-white/30" />
-          </div>
-
-          <div className="flex w-full max-w-4xl items-center overflow-hidden">
-            <div className="w-8 md:w-12 h-0.5 bg-red-500" />
-            <div className="flex-1 h-px bg-white/20" />
-          </div>
-
-          <div className="flex flex-1/12">
-            <Image
-              src="/create_studio_logo.svg"
-              alt="Create Studio"
-              width={120}
-              height={60}
-              className="opacity-90 hover:opacity-100 transition-opacity"
-            />
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-2">
-            <p className="text-white/60 uppercase tracking-widest text-sm font-light rotate-0 mt-5">
-              How we work
-            </p>
-            <div className="mt-1 w-31 h-5 bg-white/20" />
-          </div>
-
-          <div className="lg:col-span-8 space-y-12">
-            <h1 id="title_animation" className="text-6xl md:text-8xl lg:text-7xl font-bold leading-tight text-white/95">
-              The process behind <br />
-              <span className="text-white/80">our success</span>
-            </h1>
-
-            <p id="subtitle_animation" className="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
-              <span className="inline-block w-12 h-px bg-white/40 mr-4 align-middle" />
-              From first launches to lasting collaborations, we’re trusted to
-              deliver on time and at quality.
-            </p>
-
-            <div className="flex justify-center w-full max-w-4xl mx-auto">
-              <div className="text-white/30">| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</div>
-              <div className="text-white/30"> | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</div>
-              <div className="text-white/30"> | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</div>
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 px-6 md:px-12 xl:px-32 py-40 relative">
+    
+            <div className="col-span-2 flex flex-col space-y-6">
+              <div className="hidden md:block">
+                <div className="h-px w-35 bg-white/25" />
+              </div>
+    
+              <div className="flex flex-row md:flex-col">
+                <p className="text-white/60 uppercase tracking-[0.25em] text-base md:text-xs  mt-0 md:mt-10">
+                  How we work
+                </p>
+    
+                <div className="hidden sm:block mt-2 w-35 h-5 bg-white/20" />
+    
+                <div className="flex md:hidden col-span-2 items-start">
+                  <Image
+                    src="/create_studio_logo.svg"
+                    alt="Create Studio"
+                    width={130}
+                    height={60}
+                    className="opacity-90"
+                  />
+                </div>
+              </div>
+            </div>
+    
+            <div className="col-span-8 flex flex-col space-y-10">
+              <div className="flex items-center">
+                <div className="w-10 h-[3px] bg-[#ff5e44]" />
+                <div className="flex-1 h-px bg-white/20 ml-4" />
+              </div>
+    
+              <h1 id="title_animation"
+                className="text-[52px] md:text-[80px] xl:text-[90px] font-semibold leading-[1.05] text-white/95">
+                  The process behind <br />our success
+              </h1>
+    
+              <p id="subtitle_animation"
+                className="text-lg md:text-xl xl:text-2xl text-white/60 max-w-3xl leading-relaxed">
+                <span className="inline-block w-12 h-px bg-white/40 mr-4 mb-1 align-middle" />
+                From first launches to lasting collaborations, we’re trusted to deliver on time and at quality.
+              </p>
+    
+              {/* BOTTOM TICK MARKS */}
+              <div className="w-full mt-6">
+                <div className="text-white/20 tracking-[0.5em] whitespace-nowrap text-sm">
+                  | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+                </div>
+              </div>
+            </div>
+    
+            <div className="hidden md:block col-span-2 items-start ">
+              <Image
+                src="/create_studio_logo.svg"
+                alt="Create Studio"
+                width={130}
+                height={60}
+                className="opacity-90"
+              />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
   );
 }

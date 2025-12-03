@@ -19,17 +19,17 @@ export default function HeroSection() {
 
     timelineanimation.fromTo(
     "#text_animation",
-    { y: 50, opacity: 0 },
+    { y: 100, opacity: 0 },
     {
       y: 0,
       opacity: 1,
       duration: 1.5,
       stagger: 0.3,
-      ease: "power3.out",
+      ease: "power4.out",
       scrollTrigger: {
         trigger: "#hero-section",
         start: "top 50%",
-        end: "bottom 50%",
+        // end: "bottom 50%",
         toggleActions: "play none none reverse",
       },
     }
