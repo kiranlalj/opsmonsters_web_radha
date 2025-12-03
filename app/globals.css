@@ -8,7 +8,7 @@ textarea::placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   opacity: 0.8;
 }
 

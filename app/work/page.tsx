@@ -1,7 +1,10 @@
 import React from 'react'
+import SelectedWorks from './SelectedWorks'
 
 export default function Work() {
   return (
-    <div>Work page</div>
+    <>
+      <SelectedWorks />
+    </>
   )
 }

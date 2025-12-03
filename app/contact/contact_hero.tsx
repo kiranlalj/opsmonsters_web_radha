@@ -69,7 +69,7 @@ export default function ContactHero() {
       ></div>
 
       {/* LEFT SIDE - IMAGE */}
-      <div className="relative h-[55vh] lg:h-screen xl:h-[100vh]">
+      <div className="relative h-[55vh] lg:h-screen xl:h-screen">
         <Image
           src="/img/contact_form_hero_bg.webp"
           alt="Contact Background"
@@ -84,7 +84,7 @@ export default function ContactHero() {
             absolute inset-0 flex flex-col justify-end
             px-6 sm:px-10 md:px-16 xl:px-24
             pb-16
-            bg-gradient-to-t from-black/40 to-transparent
+            bg-linear-to-t from-black/40 to-transparent
           "
         >
           <h1
