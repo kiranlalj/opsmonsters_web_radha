@@ -8,12 +8,30 @@ import { FaArrowRightLong } from "react-icons/fa6";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() { 
-  
-  useEffect(() => { 
 
-    // gsap.fromTo(".bg_img", 
-    // { scale: 0.2, opacity: 0 }, 
-    // { scale: 1, opacity: 1, duration: 3, ease: "none" });
+  // useEffect(() => {
+  //   gsap.fromTo("#bg_img",
+  //     {
+  //       opacity: 0,
+  //       scale: 0.8,
+  //       transformOrigin: "center center",
+  //     },
+  //     {
+  //       opacity: 1,
+  //       scale: 1,
+  //       ease: "power3.out",
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: "#footer_section",
+  //         start: "top 80%",
+  //         end: "top 60%",
+  //         scrub: 1,
+  //       },
+  //     }
+  //   );
+  // }, []);
+  
+  useEffect(() => {
 
     const timelineanimation = gsap.timeline();
 
@@ -76,7 +94,7 @@ export default function HeroSection() {
     <>
           <section id="hero-section" className="pin relative h-screen overflow-hidden"> 
             <div id="parallax_bg_content" className="absolute inset-0 z-20 h-screen w-full overflow-hidden">
-              <div className="bg_img">
+              <div id="bg_img">
                 <Image 
                   src="/hero/hero_bg.webp" 
                   alt="flower girl Background" 
