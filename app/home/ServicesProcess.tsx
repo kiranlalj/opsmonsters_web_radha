@@ -131,88 +131,66 @@ export default function Servicesprocess() {
   ];
 
   return (
-    <section className="relative min-h-screen w-full bg-linear-to-b from-slate-950 via-purple-950 to-black py-10 md:py-20 overflow-hidden">
-      {/* --------------------- PARALLAX LAYERS --------------------- */}
+    <section id="services_section" className="relative w-full py-20 bg-[#03070d] overflow-hidden">
 
-      {/* Layer 1 — Teal Glow */}
-      <div className="parallax-layer absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-teal-500/20 blur-[150px]" />
-      </div>
+            {/* BG GRADIENT */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="
+                absolute top-[-30%] left-[-20%]
+                w-[900px] h-[900px]
+                bg-[#0aa2e1]/40
+                blur-[180px]
+                rounded-full
+              "></div>
 
-      {/* Layer 2 — Purple Glow */}
-      <div className="parallax-layer absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-[700px] h-[700px] rounded-full bg-purple-600/25 blur-[150px]" />
-      </div>
-
-      {/* Layer 3 — Gradient Fog */}
-      <div className="parallax-layer absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute inset-0 bg-linear-to-br from-[#032436] via-[#0c0f1e] to-[#14060c]" />
-      </div>
-
-      {/* --------------------- MAIN CONTENT --------------------- */}
-
-      <div className="w-full mx-auto px-6 md:px-12 lg:px-20 xl:px-32 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-          {/* LEFT CONTENT */}
-          <div id="maintext-section" className="space-y-10">
-            <h2
-              id="title-section"
-              className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[58px] font-medium text-white leading-tight max-w-xl"
-            >
-              Services built on process, precision, and people.
-            </h2>
-
-            <p
-              id="subtitle-section"
-              className="text-white/70 text-lg md:text-xl leading-relaxed max-w-md"
-            >
-              We combine strategy, design, content, and technology, giving you a
-              single partner for every stage of your brand’s growth.
-            </p>
-
-            <div id="cta-section" className="flex items-center gap-4 pt-4">
-              <AnimatedButton />
-              <p className="text-white text-lg">Chat with our Operations Manager</p>
+              <div className="
+                absolute top-[10%] right-[-20%]
+                w-[900px] h-[900px]
+                bg-[#b52963]/35
+                blur-[170px]
+                rounded-full
+              "></div>
             </div>
-          </div>
 
-          {/* RIGHT CARDS */}
-          <div
-            id="cards-grid"
-            className="grid grid-cols-1 sm:grid-cols-2 gap-8"
-          >
-            {services.map((service, index) => (
-              <div
-                key={index}
-                id="cards-section"
-                className="group relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/5 transition-all duration-500"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span>{service.icon}</span>
-                  <span className="text-orange-500 text-xs tracking-widest">
-                    {"//"}{service.number}
-                  </span>
+            <div className="relative z-10 max-w-[1550px] mx-auto px-6 md:px-12 lg:px-20 xl:px-28">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div id="maintext-section" className="space-y-10 max-w-[650px]">
+                  <h2 id="title-section" className="text-white font-semibold text-4xl sm:text-3xl md:text-4xl lg:text-4xl leading-[1.15]">
+                    Services built on process,<br /> precision, and people.
+                  </h2>
+
+                  <p id="subtitle-section" className="text-white/70 text-lg leading-relaxed max-w-[500px]">
+                    We combine strategy, design, content, and technology, giving you a
+                    single partner for every stage of your brand’s growth.
+                  </p>
+
+                  <div id="cta-section" className="flex items-center gap-4 pt-4">
+                    <AnimatedButton />
+                    <p className="text-white text-lg">Chat with our Operations Manager</p>
+                  </div>
                 </div>
 
-                <div className="w-full h-px bg-white/20 mb-4"></div>
+                <div id="cards-grid" className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[620px]">
+                  {services.map((service, index) => (
+                    <div key={index} id="cards-section" className="group relative p-5 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-2xl transition-all duration-500 hover:bg-white/5">
+                      <div className="flex items-center justify-between mb-4">
+                        <span>{service.icon}</span>
+                        <span className="text-orange-500 text-xs tracking-widest">{"//"}{service.number}</span>
+                      </div>
 
-                <h3 className="text-lg font-semibold text-white mb-3 tracking-wide">
-                  {service.title}
-                </h3>
+                      <div className="w-full h-px bg-white/20 mb-4"></div>
 
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {service.desc}
-                </p>
+                      <h3 className="text-lg font-semibold text-white mb-3 tracking-wide">{service.title}</h3>
 
-                {/* Bottom Hover Highlight */}
-                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-linear-to-r from-orange-500 to-transparent group-hover:w-full transition-all duration-700" />
+                      <p className="text-white/60 text-sm leading-relaxed">{service.desc}</p>
+
+                      <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-linear-to-r from-orange-500 to-transparent group-hover:w-full transition-all duration-700" />
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
+            </div>
       <Ourprocessinmotion />
     </section>
   );
